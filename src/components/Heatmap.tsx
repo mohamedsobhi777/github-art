@@ -22,11 +22,11 @@ export default function Heatmap({ rows = 7, cols = 52 }: HeatmapProps) {
   }, []);
 
   const getColor = (isActive: boolean) => {
-    return isActive ? 'bg-green-500 hover:bg-green-600' : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700';
+    return isActive ? 'bg-green-500 hover:bg-green-600' : 'bg-gray-100 hover:bg-gray-200';
   };
 
   return (
-    <div className="inline-block p-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
+    <div className="inline-block p-4 bg-white rounded-lg shadow-lg">
       <div className="grid gap-1" style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}>
         {Array.from({ length: rows }, (_, row) =>
           Array.from({ length: cols }, (_, col) => {
